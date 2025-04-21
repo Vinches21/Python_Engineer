@@ -8,11 +8,6 @@ from PIL import Image
 
 
 
-
-
-
-
-
 @pytest.hookimpl(tryfirst=True, hookwrapper=True)
 def pytest_runtest_makereport(item, call):
     outcome = yield
