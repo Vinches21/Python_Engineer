@@ -1,6 +1,9 @@
 import allure
 import pytest
 
+from UI_Selenium.pages.base_class import BaseClass
+
+
 @allure.title("Проверка равенства")
 @allure.description("Этот тест проверяет, что x > y")
 def test_positive_one():
@@ -23,3 +26,8 @@ def test_negative():
     x = 2
     y = 3
     assert x > y, "Не вверно"
+
+@pytest.mark.open
+def test_open_yandex(driver):
+    base_class = BaseClass(driver)
+    base_class.open("https://ya.ru")
